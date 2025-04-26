@@ -5,10 +5,18 @@
     box-sizing: border-box;
 }
 body{
+    position: relative;
     height: 1000px;
-    background-image: linear-gradient(to right, #a1c4ff, #90b4fb, #80a5f7, #7294f2, #6784ec, #6784ec, #6784ec, #6784ec, #7294f2, #80a5f7, #90b4fb, #a1c4ff);}
+    background-image: linear-gradient(to right, #a1c4ff, #90b4fb, #80a5f7, #7294f2, #6784ec, #6784ec, #6784ec, #6784ec, #7294f2, #80a5f7, #90b4fb, #a1c4ff);
+}
 
+#particles-js{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -50,6 +58,12 @@ nav a {
     display: flex;
     gap: 10px;
  }
+ .bar{
+    display: none;
+    font-size: 40px;
+    color: #2e68be;
+    cursor: pointer;
+}
 
 .logo{
     font-size: 25px;
@@ -79,17 +93,20 @@ main{
 }
 
 .content{
+    
+    font-family: "Comic Relief", system-ui;
     color: white;
     width: 40%;
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
     flex-direction: column;
     gap: 15px;
+    height: fit-content;
 }
 
 .content> h1{
-    font-size: 70px;
+    font-size: 69px;
     font-weight: 1000;
 }
 
@@ -157,3 +174,52 @@ z-index: -1;
     max-width: 100%;
     object-fit: contain;
 }
+
+
+
+@media(max-width: 700px) {
+    .container header nav,
+    .container header .Contact{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+    
+    main{
+        flex-wrap:  wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    
+
+    .content h1{
+        white-space: nowrap;
+    }
+    
+    
+}
+
+@media(max-width: 500px){
+    main{
+        gap: 0px;
+    }
+    .content{
+        justify-content: center;
+        align-items: center;  
+    }
+    .content h1{
+    white-space: nowrap;
+    font-size: 50px;
+}
+content .boximg{
+    height: 200px;
+    width: 100;
+}
+
+
+
+}
+

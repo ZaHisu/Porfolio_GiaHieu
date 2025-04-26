@@ -9,9 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    
+    <div id="particles-js"></div>
+
     <!-- ctrl shift P bao lay -->
     <div class="container">
         <header class="header">
@@ -35,9 +42,15 @@
             </nav>
             <div>
                 <button class="Contact">
+                    
                     <span > Contact </span> <i class="fa-solid fa-phone-slash"></i>
 
                 </button>
+                <!-- only show when screen < 700px -->
+                
+                    <div class="bar"> 
+                        <i class="fa-solid fa-bars"></i> 
+                    </div>
             </div>
 
 
@@ -68,8 +81,9 @@
 
     </div>
 
-
-
+<!-- cdn lay thu vien tren mang -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="./app.js"></script>
 </body>
 
 </html>
